@@ -236,4 +236,4 @@ produces a byte-identical report on pandas 2.3 and pandas 3.0.
 
 ---
 
-Built by [Oluwagbade Odimayo](https://gbadedata.com) · plant geneticist turned data scientist.
+Built by [Oluwagbade Odimayo](https://gbadedata.com)
