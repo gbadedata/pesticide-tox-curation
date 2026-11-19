@@ -1,0 +1,10 @@
+# Source data and everything derived from OpenFoodTox stay local (CC BY-ND 4.0)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/
+data/curated/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/

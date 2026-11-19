@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pesticide-tox-curation"
+version = "0.1.0"
+description = "Curating EFSA OpenFoodTox pesticide toxicology into FAIR, ontology-mapped, consistency-checked tables"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["pandas>=2.1", "pyarrow>=14", "openpyxl>=3.1", "rdkit>=2023.9"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]  # long lines are report/doc strings

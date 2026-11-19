@@ -1,0 +1,1229 @@
+format-version: 1.2
+data-version: 257
+date: 05:11:2026 18:04
+saved-by: chebi
+subsetdef: 1:STAR "Preliminary entries"
+subsetdef: 2:STAR "Annotated by 3rd party"
+subsetdef: 3:STAR "Manually annotated by ChEBI Team"
+synonymtypedef: BRAND:NAME "BRAND NAME"
+synonymtypedef: http://purl.obolibrary.org/obo/chebi/INN "INN"
+synonymtypedef: IUPAC:NAME "IUPAC NAME"
+default-namespace: chebi_ontology
+idspace: chemrof https://w3id.org/chemrof/ 
+idspace: foaf http://xmlns.com/foaf/0.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
+remark: ChEBI subsumes and replaces the Chemical Ontology first. This ontology was developed by Michael Ashburner and Pankaj Jaiswal. Data was cuarated by The ChEBI Curation Team. For any queries contact chebi-help@ebi.ac.uk
+ontology: chebi
+property_value: foaf:homepage "https://www.ebi.ac.uk/chebi" xsd:anyURI
+property_value: owl:versionInfo "257" xsd:string
+property_value: terms:description "Chemical Entities of Biological Interest, also known as ChEBI, is a chemical database and ontology of molecular entities focused on 'small' chemical compounds, that is part of the Open Biomedical Ontologies (OBO) effort at the European Bioinformatics Institute (EBI)." xsd:string
+property_value: terms:license https://creativecommons.org/licenses/by/4.0/
+property_value: terms:title "ChEBI Ontology" xsd:string
+
+[Term]
+id: CHEBI:132272
+name: herbicide safener
+def: "A compound used with herbicides that reduces the effect of the herbicide on crop plants or otherwise improves the selectivity of the herbicide for weed species over the crop plant." []
+subset: 3:STAR
+synonym: "herbicide safeners" RELATED [chebi]
+xref: pubmed:12222792 {source="pubmed"}
+xref: pubmed:23564986 {source="pubmed"}
+xref: wikipedia.en:Herbicide_safener {source="wikipedia.en"}
+is_a: CHEBI:33286 ! agrochemical
+
+[Term]
+id: CHEBI:17792
+name: organohalogen compound
+alt_id: CHEBI:13444
+alt_id: CHEBI:36684
+alt_id: CHEBI:8767
+def: "A compound containing at least one carbon-halogen bond (where X is a halogen atom)." []
+subset: 3:STAR
+synonym: "organic halide" RELATED [kegg.compound]
+synonym: "organic halides" RELATED [chebi]
+synonym: "organohalogen compounds" RELATED [chebi]
+synonym: "RX" RELATED [uniprot_ft]
+synonym: "RX" RELATED [kegg.compound]
+xref: kegg.compound:C01322 {source="kegg.compound"}
+xref: metacyc.compound:Organohalogen-Compounds {source="metacyc.compound"}
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:37578 ! halide
+property_value: chemrof:charge "0" xsd:integer
+property_value: chemrof:generalized_empirical_formula "RX" xsd:string
+property_value: chemrof:smiles_string "**" xsd:string
+
+[Term]
+id: CHEBI:20569
+name: EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) inhibitor
+def: "An EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor that interferes with the action of 3-phosphoshikimate 1-carboxyvinyltransferase (EC 2.5.1.19)." []
+subset: 3:STAR
+synonym: "3-enol-pyruvoylshikimate-5-phosphate synthase inhibitor" RELATED [chebi]
+synonym: "3-enol-pyruvoylshikimate-5-phosphate synthase inhibitors" RELATED [chebi]
+synonym: "3-phosphoshikimate 1-carboxyvinyltransferase (EC 2.5.1.19) inhibitor" RELATED [chebi]
+synonym: "3-phosphoshikimate 1-carboxyvinyltransferase (EC 2.5.1.19) inhibitors" RELATED [chebi]
+synonym: "3-phosphoshikimate 1-carboxyvinyltransferase inhibitor" RELATED [chebi]
+synonym: "3-phosphoshikimate 1-carboxyvinyltransferase inhibitors" RELATED [chebi]
+synonym: "5-enolpyruvylshikimate-3-phosphate synthase inhibitor" RELATED [chebi]
+synonym: "5-enolpyruvylshikimate-3-phosphate synthase inhibitors" RELATED [chebi]
+synonym: "EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) inhibitors" RELATED [chebi]
+synonym: "EC 2.5.1.19 inhibitor" RELATED [chebi]
+synonym: "EC 2.5.1.19 inhibitors" RELATED [chebi]
+synonym: "EPSP synthase inhibitor" RELATED [chebi]
+synonym: "EPSP synthase inhibitors" RELATED [chebi]
+synonym: "phosphoenolpyruvate:3-phosphoshikimate 5-O-(1-carboxyvinyl)-transferase inhibitor" RELATED [chebi]
+synonym: "phosphoenolpyruvate:3-phosphoshikimate 5-O-(1-carboxyvinyl)-transferase inhibitors" RELATED [chebi]
+is_a: CHEBI:76663 ! EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor
+
+[Term]
+id: CHEBI:22153
+name: acaricide
+def: "A substance used to destroy pests of the subclass <em>Acari</em> (mites and ticks)." []
+subset: 3:STAR
+synonym: "acaricides" RELATED [chebi]
+synonym: "Akarizid" RELATED [chebi]
+synonym: "Akarizide" RELATED [chebi]
+synonym: "miticide" RELATED [chebi]
+xref: wikipedia.en:Acaricide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:23117
+name: chlorine molecular entity
+def: "A halogen molecular entity containing one or more atoms of chlorine." []
+subset: 3:STAR
+is_a: CHEBI:24471 ! halogen molecular entity
+relationship: BFO:0000051 CHEBI:23116 ! has part chlorine atom
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+subset: 3:STAR
+synonym: "entidad molecular" RELATED [iupac]
+synonym: "entidades moleculares" RELATED [iupac]
+synonym: "entite moleculaire" RELATED [iupac]
+synonym: "molecular entities" RELATED [iupac]
+synonym: "molecular entity" EXACT IUPAC:NAME [IUPAC]
+synonym: "molecular entity" RELATED IUPAC:NAME [iupac]
+synonym: "molekulare Entitaet" RELATED [chebi]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:23924
+name: enzyme inhibitor
+def: "A compound or agent that combines with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction." []
+subset: 3:STAR
+synonym: "enzyme inhibitor" EXACT IUPAC:NAME [IUPAC]
+synonym: "enzyme inhibitor" RELATED IUPAC:NAME [iupac]
+synonym: "enzyme inhibitors" RELATED [chebi]
+synonym: "inhibidor enzimatico" RELATED [chebi]
+synonym: "inhibidores enzimaticos" RELATED [chebi]
+synonym: "inhibiteur enzymatique" RELATED [chebi]
+synonym: "inhibiteurs enzymatiques" RELATED [chebi]
+is_a: CHEBI:35222 ! inhibitor
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
+id: CHEBI:24127
+name: fungicide
+def: "A substance used to destroy fungal pests." []
+subset: 3:STAR
+synonym: "fungicides" RELATED [chebi]
+is_a: CHEBI:25944 ! pesticide
+is_a: CHEBI:35718 ! antifungal agent
+
+[Term]
+id: CHEBI:24373
+name: glycine derivative
+def: "A proteinogenic amino acid derivative resulting from reaction of glycine at the amino group or the carboxy group, or from the replacement of any hydrogen of glycine by a heteroatom." []
+subset: 3:STAR
+is_a: CHEBI:83811 ! proteinogenic amino acid derivative
+relationship: RO:0018038 CHEBI:15428 ! has functional parent glycine
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+subset: 3:STAR
+synonym: "chemical entity" RELATED [uniprot_ft]
+
+[Term]
+id: CHEBI:24432
+name: biological role
+def: "A role played by the molecular entity or part thereof within a biological context." []
+subset: 3:STAR
+synonym: "biological function" RELATED [chebi]
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:24471
+name: halogen molecular entity
+subset: 3:STAR
+synonym: "halogen compounds" RELATED [chebi]
+synonym: "halogen molecular entities" RELATED [chebi]
+synonym: "halogen molecular entity" RELATED [chebi]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:24473 ! has part halogen
+
+[Term]
+id: CHEBI:24527
+name: herbicide
+def: "A substance used to destroy plant pests." []
+subset: 3:STAR
+synonym: "herbicides" RELATED [chebi]
+synonym: "Herbizid" RELATED [chebi]
+synonym: "Unkrautbekaempfungsmittel" RELATED [chebi]
+synonym: "Unkrautvertilgungsmittel" RELATED [chebi]
+synonym: "Wildkrautbekaempfungsmittel" RELATED [chebi]
+xref: wikipedia.en:Herbicide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:24532
+name: organic heterocyclic compound
+def: "A cyclic compound having as ring members atoms of carbon and at least of one other element." []
+subset: 3:STAR
+synonym: "organic heterocycle" RELATED [chebi]
+synonym: "organic heterocyclic compounds" RELATED [chebi]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33832 ! organic cyclic compound
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:24651
+name: hydroxides
+def: "Hydroxides are chemical compounds containing a hydroxy group or salts containing hydroxide (OH<small><sup>−</small></sup>)." []
+subset: 3:STAR
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:33608 ! hydrogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+relationship: BFO:0000051 CHEBI:43176 ! has part hydroxy group
+
+[Term]
+id: CHEBI:24833
+name: oxoacid
+def: "A compound which contains oxygen, at least one other element, and at least one hydrogen bound to oxygen, and which produces a conjugate base by loss of positive hydrogen ion(s) (hydrons)." []
+subset: 3:STAR
+synonym: "oxacids" RELATED [chebi]
+synonym: "oxiacids" RELATED [chebi]
+synonym: "oxo acid" RELATED [chebi]
+synonym: "oxoacid" EXACT IUPAC:NAME [IUPAC]
+synonym: "oxoacid" RELATED IUPAC:NAME [iupac]
+synonym: "oxoacids" EXACT IUPAC:NAME [IUPAC]
+synonym: "oxoacids" RELATED IUPAC:NAME [iupac]
+synonym: "oxy-acids" RELATED [chebi]
+synonym: "oxyacids" RELATED [chebi]
+is_a: CHEBI:24651 ! hydroxides
+relationship: RO:0000087 CHEBI:39141 ! has role Bronsted acid
+
+[Term]
+id: CHEBI:24852
+name: insecticide
+def: "Strictly, a substance intended to kill members of the class <em>Insecta</em>.  In common usage, any substance used for preventing, destroying, repelling or controlling insects." []
+subset: 3:STAR
+synonym: "insecticides" RELATED [chebi]
+xref: wikipedia.en:Insecticide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:25367
+name: molecule
+def: "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." []
+subset: 3:STAR
+synonym: "molecula" RELATED [iupac]
+synonym: "molecule" RELATED [iupac]
+synonym: "molecules" RELATED [iupac]
+synonym: "Molekuel" RELATED [chebi]
+synonym: "neutral molecular compounds" RELATED [iupac]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:25491
+name: nematicide
+def: "A substance used to destroy pests of the phylum <em>Nematoda</em> (roundworms)." []
+subset: 3:STAR
+synonym: "nematicides" RELATED [chebi]
+synonym: "nematocide" RELATED [chebi]
+synonym: "nematocides" RELATED [chebi]
+xref: wikipedia.en:Nematicide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:25693
+name: organic heteromonocyclic compound
+subset: 3:STAR
+synonym: "organic heteromonocyclic compounds" RELATED [chebi]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:33670 ! heteromonocyclic compound
+
+[Term]
+id: CHEBI:25703
+name: organic phosphate
+subset: 3:STAR
+synonym: "organic phosphate" RELATED [chebi]
+synonym: "organic phosphate ester" RELATED [chebi]
+synonym: "organic phosphate esters" RELATED [chebi]
+synonym: "organic phosphates" RELATED [chebi]
+synonym: "organophosphate ester" RELATED [chebi]
+synonym: "organophosphate esters" RELATED [chebi]
+xref: wikipedia.en:Organophosphate {source="wikipedia.en"}
+is_a: CHEBI:25710 ! organophosphorus compound
+is_a: CHEBI:26020 ! phosphate
+is_a: CHEBI:26079 ! phosphoric acid derivative
+
+[Term]
+id: CHEBI:25710
+name: organophosphorus compound
+def: "An organophosphorus compound is formally a compound containing at least one carbon-phosphorus bond, but the term is often extended to include esters and thioesters." []
+subset: 3:STAR
+synonym: "organophosphorus compound" RELATED [chebi]
+synonym: "organophosphorus compounds" RELATED [chebi]
+xref: wikipedia.en:Organophosphorus_compound {source="wikipedia.en"}
+is_a: CHEBI:26082 ! phosphorus molecular entity
+is_a: CHEBI:33285 ! heteroorganic entity
+
+[Term]
+id: CHEBI:25716
+name: organothiophosphorus compound
+def: "An organothiophosphorus compound is an organophosphorus compound which contains a phosphorus-sulfur bond." []
+subset: 3:STAR
+synonym: "organothiophosphorus compounds" RELATED [chebi]
+is_a: CHEBI:25710 ! organophosphorus compound
+is_a: CHEBI:26835 ! sulfur molecular entity
+
+[Term]
+id: CHEBI:25806
+name: oxygen molecular entity
+subset: 3:STAR
+synonym: "oxygen molecular entities" RELATED [chebi]
+synonym: "oxygen molecular entity" RELATED [chebi]
+is_a: CHEBI:33304 ! chalcogen molecular entity
+relationship: BFO:0000051 CHEBI:25805 ! has part oxygen atom
+
+[Term]
+id: CHEBI:25944
+name: pesticide
+def: "Strictly, a substance intended to kill pests. In common usage, any substance used for controlling, preventing, or destroying animal, microbiological or plant pests." []
+subset: 3:STAR
+synonym: "pesticide" EXACT IUPAC:NAME [IUPAC]
+synonym: "pesticide" RELATED IUPAC:NAME [iupac]
+synonym: "pesticides" RELATED [chebi]
+synonym: "Pestizid" RELATED [chebi]
+synonym: "Pestizide" RELATED [chebi]
+xref: wikipedia.en:Pesticide {source="wikipedia.en"}
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:26020
+name: phosphate
+def: "Salts and esters of phosphoric and oligophosphoric acids and their chalcogen analogues. In inorganic chemistry, the term is also used to describe anionic coordination entities with phosphorus as central atom." []
+subset: 3:STAR
+synonym: "phosphates" EXACT IUPAC:NAME [IUPAC]
+synonym: "phosphates" RELATED IUPAC:NAME [iupac]
+synonym: "phosphates" RELATED [chebi]
+is_a: CHEBI:26079 ! phosphoric acid derivative
+
+[Term]
+id: CHEBI:26069
+name: phosphonic acids
+def: "HP(=O)(OH)<small><sub>2</sub></small>  (phosphonic acid) and its P-substituted derivatives." []
+subset: 3:STAR
+synonym: "phosphonic acids" EXACT IUPAC:NAME [IUPAC]
+synonym: "phosphonic acids" RELATED IUPAC:NAME [iupac]
+is_a: CHEBI:36360 ! phosphorus oxoacids and derivatives
+
+[Term]
+id: CHEBI:26079
+name: phosphoric acid derivative
+subset: 1:STAR
+synonym: "phosphoric acid derivatives" RELATED [chebi]
+synonym: "phosphoric acids" RELATED [chebi]
+is_a: CHEBI:36359 ! phosphorus oxoacid derivative
+relationship: RO:0018038 CHEBI:26078 ! has functional parent phosphoric acid
+
+[Term]
+id: CHEBI:26082
+name: phosphorus molecular entity
+subset: 3:STAR
+synonym: "phosphorus molecular entities" RELATED [chebi]
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: BFO:0000051 CHEBI:28659 ! has part phosphorus atom
+
+[Term]
+id: CHEBI:26155
+name: plant growth regulator
+def: "A chemical, natural or artificial, that can affect the rate of growth of a plant." []
+subset: 3:STAR
+synonym: "plant growth regulators" RELATED [chebi]
+is_a: CHEBI:39317 ! growth regulator
+
+[Term]
+id: CHEBI:26421
+name: pyridines
+def: "Any organonitrogen heterocyclic compound based on a pyridine skeleton and its substituted derivatives." []
+subset: 3:STAR
+is_a: CHEBI:25693 ! organic heteromonocyclic compound
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:26835
+name: sulfur molecular entity
+subset: 3:STAR
+synonym: "sulfur molecular entities" RELATED [chebi]
+synonym: "sulfur molecular entity" RELATED [chebi]
+is_a: CHEBI:33304 ! chalcogen molecular entity
+relationship: BFO:0000051 CHEBI:26833 ! has part sulfur atom
+
+[Term]
+id: CHEBI:27744
+name: glyphosate
+alt_id: CHEBI:24423
+alt_id: CHEBI:43013
+alt_id: CHEBI:5510
+def: "A phosphonic acid resulting from the formal oxidative coupling of the methyl group of methylphosphonic acid with the amino group of glycine. It is one of the most commonly used herbicides worldwide, and the only one to target the enzyme 5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS)." []
+subset: 3:STAR
+synonym: "Glyphosate" RELATED [kegg.compound]
+synonym: "N-(phosphonomethyl)glycine" EXACT IUPAC:NAME [IUPAC]
+synonym: "N-(phosphonomethyl)glycine" RELATED IUPAC:NAME [iupac]
+synonym: "Roundup" RELATED BRAND:NAME [kegg.compound]
+xref: beilstein:2045054 {source="beilstein"}
+xref: cas:1071-83-6 {source="cas"}
+xref: drugbank:DB04539 {source="drugbank"}
+xref: gmelin:279222 {source="gmelin"}
+xref: kegg.compound:C01705 {source="kegg.compound"}
+xref: pdb-ccd:GPF {source="pdb-ccd"}
+xref: pdb-ccd:GPJ {source="pdb-ccd"}
+xref: pesticides:glyphosate {source="pesticides"}
+xref: ppdb:373 {source="ppdb"}
+xref: pubmed:27758090 {source="pubmed"}
+xref: pubmed:28266132 {source="pubmed"}
+xref: pubmed:28474816 {source="pubmed"}
+xref: pubmed:28643882 {source="pubmed"}
+xref: pubmed:28711546 {source="pubmed"}
+xref: pubmed:30471482 {source="pubmed"}
+xref: pubmed:30875550 {source="pubmed"}
+xref: pubmed:31030151 {source="pubmed"}
+xref: pubmed:31342895 {source="pubmed"}
+xref: umbbd.compound:c0134 {source="umbbd.compound"}
+xref: wikipedia.en:Glyphosate {source="wikipedia.en"}
+is_a: CHEBI:24373 ! glycine derivative
+is_a: CHEBI:44976 ! phosphonic acid
+relationship: RO:0000087 CHEBI:20569 ! has role EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) inhibitor
+relationship: RO:0000087 CHEBI:24527 ! has role herbicide
+relationship: RO:0000087 CHEBI:33286 ! has role agrochemical
+relationship: RO:0018034 CHEBI:133673 ! is conjugate acid of glyphosate(1-)
+relationship: RO:0018034 CHEBI:67052 ! is conjugate acid of glyphosate(2-)
+property_value: chemrof:charge "0" xsd:integer
+property_value: chemrof:generalized_empirical_formula "C3H8NO5P" xsd:string
+property_value: chemrof:inchi_key_string "XDDAORKBJWWYJS-UHFFFAOYSA-N" xsd:string
+property_value: chemrof:inchi_string "InChI=1S/C3H8NO5P/c5-3(6)1-4-2-10(7,8)9/h4H,1-2H2,(H,5,6)(H2,7,8,9)" xsd:string
+property_value: chemrof:mass "169.073" xsd:decimal
+property_value: chemrof:monoisotopic_mass "169.01401" xsd:decimal
+property_value: chemrof:smiles_string "O=C(O)CNCP(=O)(O)O" xsd:string
+
+[Term]
+id: CHEBI:33232
+name: application
+def: "Intended use of the molecular entity or part thereof by humans." []
+subset: 3:STAR
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:33241
+name: oxoacid derivative
+subset: 3:STAR
+synonym: "oxoacid derivatives" RELATED [chebi]
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+relationship: RO:0018038 CHEBI:24833 ! has functional parent oxoacid
+
+[Term]
+id: CHEBI:33281
+name: antimicrobial agent
+alt_id: CHEBI:22582
+def: "A substance that kills or slows the growth of microorganisms, including bacteria, viruses, fungi and protozoans." []
+subset: 3:STAR
+synonym: "antibiotic" RELATED [chebi]
+synonym: "antibiotics" RELATED [chebi]
+synonym: "Antibiotika" RELATED [chebi]
+synonym: "Antibiotikum" RELATED [chebi]
+synonym: "antibiotique" RELATED [iupac]
+synonym: "antimicrobial" RELATED [chebi]
+synonym: "antimicrobial agents" RELATED [chebi]
+synonym: "antimicrobials" RELATED [chebi]
+synonym: "microbicide" RELATED [chebi]
+synonym: "microbicides" RELATED [chebi]
+xref: pubmed:12964249 {source="pubmed"}
+xref: pubmed:22117953 {source="pubmed"}
+xref: pubmed:22439833 {source="pubmed"}
+xref: pubmed:22849268 {source="pubmed"}
+xref: pubmed:22849276 {source="pubmed"}
+xref: pubmed:22958833 {source="pubmed"}
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:33285
+name: heteroorganic entity
+def: "A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms." []
+subset: 3:STAR
+synonym: "heteroorganic entities" RELATED [chebi]
+synonym: "organoelement compounds" RELATED [chebi]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33286
+name: agrochemical
+def: "An agrochemical is a substance that is used in agriculture or horticulture." []
+subset: 3:STAR
+synonym: "agrichemical" RELATED [chebi]
+synonym: "agrichemicals" RELATED [chebi]
+synonym: "agricultural chemicals" RELATED [chebi]
+synonym: "agrochemicals" RELATED [chebi]
+xref: wikipedia.en:Agrochemical {source="wikipedia.en"}
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33288
+name: rodenticide
+def: "A substance used to destroy rodent pests." []
+subset: 3:STAR
+synonym: "rodenticides" RELATED [chebi]
+xref: wikipedia.en:Rodenticide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:33302
+name: pnictogen molecular entity
+def: "A p-block molecular entity containing any pnictogen." []
+subset: 3:STAR
+synonym: "pnictogen molecular entities" RELATED [chebi]
+synonym: "pnictogen molecular entity" RELATED [chebi]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33300 ! has part pnictogen
+
+[Term]
+id: CHEBI:33304
+name: chalcogen molecular entity
+def: "Any p-block molecular entity containing a chalcogen." []
+subset: 3:STAR
+synonym: "chalcogen compounds" RELATED [chebi]
+synonym: "chalcogen molecular entities" RELATED [chebi]
+synonym: "chalcogen molecular entity" RELATED [chebi]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33303 ! has part chalcogen
+
+[Term]
+id: CHEBI:33408
+name: pnictogen oxoacid
+subset: 3:STAR
+synonym: "pnictogen oxoacids" RELATED [chebi]
+is_a: CHEBI:24833 ! oxoacid
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: RO:0000087 CHEBI:138103 ! has role inorganic acid
+
+[Term]
+id: CHEBI:33457
+name: phosphorus oxoacid
+def: "A pnictogen oxoacid which contains phosphorus and oxygen, at least one hydrogen atom bound to oxygen, and forms an ion by the loss of one or more protons." []
+subset: 3:STAR
+synonym: "oxoacids of phosphorus" RELATED [chebi]
+synonym: "Oxosaeure des Phosphors" RELATED [chebi]
+synonym: "phosphorus oxoacid" RELATED [chebi]
+synonym: "phosphorus oxoacids" RELATED [chebi]
+is_a: CHEBI:33408 ! pnictogen oxoacid
+is_a: CHEBI:36360 ! phosphorus oxoacids and derivatives
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+def: "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." []
+subset: 3:STAR
+synonym: "main group compounds" RELATED [chebi]
+synonym: "main group molecular entities" RELATED [chebi]
+is_a: CHEBI:23367 ! molecular entity
+relationship: BFO:0000051 CHEBI:33318 ! has part main group element atom
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+subset: 3:STAR
+synonym: "carbon group molecular entities" RELATED [chebi]
+synonym: "carbon group molecular entity" RELATED [chebi]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33306 ! has part carbon group element atom
+
+[Term]
+id: CHEBI:33595
+name: cyclic compound
+def: "Any molecule that consists of a series of atoms joined together to form a ring." []
+subset: 3:STAR
+synonym: "cyclic compounds" RELATED [chebi]
+xref: wikipedia.en:Cyclic_compound {source="wikipedia.en"}
+is_a: CHEBI:25367 ! molecule
+
+[Term]
+id: CHEBI:33608
+name: hydrogen molecular entity
+subset: 3:STAR
+synonym: "hydrogen compounds" RELATED [chebi]
+synonym: "hydrogen molecular entities" RELATED [chebi]
+is_a: CHEBI:33674 ! s-block molecular entity
+relationship: BFO:0000051 CHEBI:49637 ! has part hydrogen atom
+
+[Term]
+id: CHEBI:33661
+name: monocyclic compound
+subset: 3:STAR
+synonym: "monocyclic compounds" RELATED [chebi]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33670
+name: heteromonocyclic compound
+subset: 3:STAR
+synonym: "heteromonocyclic compound" EXACT IUPAC:NAME [IUPAC]
+synonym: "heteromonocyclic compound" RELATED IUPAC:NAME [iupac]
+synonym: "heteromonocyclic compounds" EXACT IUPAC:NAME [IUPAC]
+synonym: "heteromonocyclic compounds" RELATED IUPAC:NAME [iupac]
+is_a: CHEBI:33661 ! monocyclic compound
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:33674
+name: s-block molecular entity
+def: "An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element." []
+subset: 3:STAR
+synonym: "s-block compounds" RELATED [chebi]
+synonym: "s-block molecular entities" RELATED [chebi]
+synonym: "s-block molecular entity" RELATED [chebi]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: BFO:0000051 CHEBI:33559 ! has part s-block element atom
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+def: "A main group molecular entity that contains one or more atoms of a p-block element." []
+subset: 3:STAR
+synonym: "p-block compounds" RELATED [chebi]
+synonym: "p-block molecular entities" RELATED [chebi]
+synonym: "p-block molecular entitiy" RELATED [chebi]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: BFO:0000051 CHEBI:33560 ! has part p-block element atom
+
+[Term]
+id: CHEBI:33832
+name: organic cyclic compound
+def: "Any organic molecule that consists of atoms connected in the form of a ring." []
+subset: 3:STAR
+synonym: "organic cyclic compounds" RELATED [chebi]
+is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:33904
+name: molluscicide
+def: "A substance used to destroy pests of the phylum <em>Mollusca</em>." []
+subset: 3:STAR
+synonym: "molluscicides" RELATED [chebi]
+xref: wikipedia.en:Molluscicide {source="wikipedia.en"}
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:34631
+name: chlorpyrifos
+def: "An  organic thiophosphate that is <em>O</em>,<em>O</em>-diethyl hydrogen phosphorothioate in which the hydrogen of the hydroxy group has been replaced by a 3,5,6-trichloropyridin-2-yl group." []
+subset: 3:STAR
+synonym: "Bolton" RELATED BRAND:NAME [chebi]
+synonym: "Brodan" RELATED BRAND:NAME [chemidplus]
+synonym: "Chloropyrifos" RELATED [chembl]
+synonym: "Chlorpyrifos" RELATED [kegg.compound]
+synonym: "chlorpyrifos" RELATED [uniprot_ft]
+synonym: "chlorpyrifos ethyl" RELATED [chemidplus]
+synonym: "Chlorpyrifos-ethyl" RELATED [chemidplus]
+synonym: "Chlorpyriphos" RELATED [kegg.compound]
+synonym: "Cobalt" RELATED BRAND:NAME [chebi]
+synonym: "Detmol" RELATED BRAND:NAME [chemidplus]
+synonym: "Dowco 179" RELATED BRAND:NAME [chebi]
+synonym: "Dursban" RELATED BRAND:NAME [chemidplus]
+synonym: "Empire" RELATED BRAND:NAME [chebi]
+synonym: "ENT-27311" RELATED [chembl]
+synonym: "Equity" RELATED BRAND:NAME [chebi]
+synonym: "Eradex" RELATED BRAND:NAME [chebi]
+synonym: "Lentrek" RELATED BRAND:NAME [chemidplus]
+synonym: "Lock-On" RELATED BRAND:NAME [chemidplus]
+synonym: "Lorsban" RELATED BRAND:NAME [chemidplus]
+synonym: "m-Chlorpyrifos" RELATED [nist]
+synonym: "NSC-755891" RELATED [chembl]
+synonym: "Nufos" RELATED BRAND:NAME [chebi]
+synonym: "O,O-diethyl O-(3,5,6-trichloropyridin-2-yl) phosphorothioate" EXACT IUPAC:NAME [IUPAC]
+synonym: "O,O-diethyl O-(3,5,6-trichloropyridin-2-yl) phosphorothioate" RELATED IUPAC:NAME [iupac]
+synonym: "O,O-diethyl O-(3,5,6-trichloropyridin-2-yl) thiophosphate" RELATED [iupac]
+synonym: "o,o-Diethyl-o-(3,5,6-trichloro-2-pyridyl)phosphorothioate" RELATED [nist]
+synonym: "Phosphorothioic acid, O,O-diethyl O-(3,5,6-trichloro-2-pyridinyl) ester" RELATED [chemidplus]
+synonym: "Piridane" RELATED BRAND:NAME [chemidplus]
+synonym: "Stipend" RELATED BRAND:NAME [chemidplus]
+synonym: "Tricel" RELATED BRAND:NAME [chebi]
+synonym: "Trichlorpyrphos" RELATED [chemidplus]
+synonym: "Warhawk" RELATED BRAND:NAME [chebi]
+xref: cas:2921-88-2 {source="cas"}
+xref: hmdb:HMDB0041856 {source="hmdb"}
+xref: kegg.compound:C14322 {source="kegg.compound"}
+xref: kegg.drug:D07688 {source="kegg.drug"}
+xref: pesticides:chlorpyrifos {source="pesticides"}
+xref: ppdb:154 {source="ppdb"}
+xref: pubmed:10096871 {source="pubmed"}
+xref: pubmed:10963310 {source="pubmed"}
+xref: pubmed:11052723 {source="pubmed"}
+xref: pubmed:11882345 {source="pubmed"}
+xref: pubmed:14519960 {source="pubmed"}
+xref: pubmed:15187442 {source="pubmed"}
+xref: pubmed:16288867 {source="pubmed"}
+xref: pubmed:18166376 {source="pubmed"}
+xref: pubmed:18407564 {source="pubmed"}
+xref: pubmed:18438404 {source="pubmed"}
+xref: pubmed:18570364 {source="pubmed"}
+xref: pubmed:19742452 {source="pubmed"}
+xref: pubmed:19937914 {source="pubmed"}
+xref: pubmed:19937976 {source="pubmed"}
+xref: pubmed:20960471 {source="pubmed"}
+xref: pubmed:21162148 {source="pubmed"}
+xref: pubmed:21432985 {source="pubmed"}
+xref: pubmed:21858910 {source="pubmed"}
+xref: pubmed:21940169 {source="pubmed"}
+xref: pubmed:23193012 {source="pubmed"}
+xref: pubmed:23571415 {source="pubmed"}
+xref: pubmed:31152760 {source="pubmed"}
+xref: pubmed:37589667 {source="pubmed"}
+xref: pubmed:8600291 {source="pubmed"}
+xref: pubmed:8917702 {source="pubmed"}
+xref: reaxys:1545756 {source="reaxys"}
+xref: wikipedia.en:Chlorpyrifos {source="wikipedia.en"}
+is_a: CHEBI:37512 ! organic thiophosphate
+is_a: CHEBI:39173 ! chloropyridine
+relationship: RO:0000087 CHEBI:22153 ! has role acaricide
+relationship: RO:0000087 CHEBI:24852 ! has role insecticide
+relationship: RO:0000087 CHEBI:33286 ! has role agrochemical
+relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
+relationship: RO:0000087 CHEBI:37733 ! has role EC 3.1.1.8 (cholinesterase) inhibitor
+relationship: RO:0000087 CHEBI:38462 ! has role EC 3.1.1.7 (acetylcholinesterase) inhibitor
+relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
+property_value: chemrof:charge "0" xsd:integer
+property_value: chemrof:generalized_empirical_formula "C9H11Cl3NO3PS" xsd:string
+property_value: chemrof:inchi_key_string "SBPBAQFWLVIOKP-UHFFFAOYSA-N" xsd:string
+property_value: chemrof:inchi_string "InChI=1S/C9H11Cl3NO3PS/c1-3-14-17(18,15-4-2)16-9-7(11)5-6(10)8(12)13-9/h5H,3-4H2,1-2H3" xsd:string
+property_value: chemrof:mass "350.591" xsd:decimal
+property_value: chemrof:monoisotopic_mass "348.92628" xsd:decimal
+property_value: chemrof:smiles_string "CCOP(=S)(OCC)Oc1nc(Cl)c(Cl)cc1Cl" xsd:string
+
+[Term]
+id: CHEBI:35222
+name: inhibitor
+def: "A substance that diminishes the rate of a chemical reaction." []
+subset: 3:STAR
+synonym: "inhibidor" RELATED [chebi]
+synonym: "inhibiteur" RELATED [chebi]
+synonym: "inhibitor" EXACT IUPAC:NAME [IUPAC]
+synonym: "inhibitor" RELATED IUPAC:NAME [iupac]
+synonym: "inhibitors" RELATED [chebi]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35352
+name: organonitrogen compound
+def: "Any heteroorganic entity containing at least one carbon-nitrogen bond." []
+subset: 3:STAR
+synonym: "organonitrogen compounds" EXACT IUPAC:NAME [IUPAC]
+synonym: "organonitrogen compounds" RELATED IUPAC:NAME [iupac]
+synonym: "organonitrogens" RELATED [chebi]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:35701
+name: ester
+alt_id: CHEBI:23960
+alt_id: CHEBI:4859
+def: "A compound formally derived from an oxoacid R<small><sub><em>k</em></sub></small>E(=O)<small><sub><em>l</em></sub></small>(OH)<small><sub><em>m</em></sub></small> (<em>l</em> > 0) and an alcohol, phenol, heteroarenol, or enol by linking with formal loss of water from an acidic hydroxy group of the former and a hydroxy group of the latter." []
+subset: 3:STAR
+synonym: "Ester" RELATED [kegg.compound]
+synonym: "esters" RELATED [chebi]
+xref: kegg.compound:C00287 {source="kegg.compound"}
+xref: wikipedia.en:Ester {source="wikipedia.en"}
+is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:35703
+name: xenobiotic
+alt_id: CHEBI:10074
+alt_id: CHEBI:27333
+def: "A xenobiotic (Greek, <em>xenos</em> \"foreign\"; <em>bios</em> \"life\") is a compound that is foreign to a living organism. Principal xenobiotics include: drugs, carcinogens and various compounds that have been introduced into the environment by artificial means." []
+subset: 3:STAR
+synonym: "Xenobiotic" EXACT [KEGG_COMPOUND]
+synonym: "Xenobiotic" RELATED [kegg.compound]
+synonym: "xenobiotic" EXACT IUPAC:NAME [IUPAC]
+synonym: "xenobiotic" RELATED IUPAC:NAME [iupac]
+synonym: "xenobiotic compounds" RELATED [chebi]
+synonym: "xenobiotics" EXACT IUPAC:NAME [IUPAC]
+synonym: "xenobiotics" RELATED IUPAC:NAME [iupac]
+xref: kegg.compound:C06708 {source="kegg.compound"}
+xref: wikipedia.en:Xenobiotic {source="wikipedia.en"}
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35718
+name: antifungal agent
+def: "An  antimicrobial agent that destroys fungi by suppressing their ability to grow or reproduce." []
+subset: 3:STAR
+synonym: "antifungal" RELATED [chebi]
+synonym: "antifungal agents" RELATED [chebi]
+synonym: "antifungal drug" RELATED [chebi]
+synonym: "antifungal drugs" RELATED [chebi]
+synonym: "antifungals" RELATED [chebi]
+is_a: CHEBI:33281 ! antimicrobial agent
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+def: "Any molecular entity consisting of more than one atom." []
+subset: 3:STAR
+synonym: "polyatomic entities" RELATED [chebi]
+is_a: CHEBI:23367 ! molecular entity
+relationship: BFO:0000051 CHEBI:24433 ! has part group
+
+[Term]
+id: CHEBI:36359
+name: phosphorus oxoacid derivative
+subset: 3:STAR
+synonym: "phosphorus oxoacid derivative" RELATED [chebi]
+is_a: CHEBI:33241 ! oxoacid derivative
+is_a: CHEBI:36360 ! phosphorus oxoacids and derivatives
+relationship: RO:0018038 CHEBI:33457 ! has functional parent phosphorus oxoacid
+
+[Term]
+id: CHEBI:36360
+name: phosphorus oxoacids and derivatives
+subset: 1:STAR
+synonym: "phosphorus oxoacids and derivatives" RELATED [chebi]
+is_a: CHEBI:26082 ! phosphorus molecular entity
+
+[Term]
+id: CHEBI:36683
+name: organochlorine compound
+def: "An organochlorine compound is a compound containing at least one carbon-chlorine bond." []
+subset: 3:STAR
+synonym: "an organochlorine molecule" RELATED [uniprot_ft]
+synonym: "chloroorganic compounds" RELATED [chebi]
+synonym: "chlororganische Verbindungen" RELATED [chebi]
+synonym: "organochloride" RELATED [chebi]
+synonym: "organochloride compound" RELATED [chebi]
+synonym: "organochloride compounds" RELATED [chebi]
+synonym: "organochlorides" RELATED [chebi]
+synonym: "organochlorine compound" RELATED [chebi]
+synonym: "organochlorine compounds" RELATED [chebi]
+xref: metacyc.compound:Chlorides {source="metacyc.compound"}
+xref: wikipedia.en:Organochloride {source="wikipedia.en"}
+is_a: CHEBI:17792 ! organohalogen compound
+is_a: CHEBI:23117 ! chlorine molecular entity
+property_value: chemrof:charge "0" xsd:integer
+property_value: chemrof:generalized_empirical_formula "ClR" xsd:string
+property_value: chemrof:mass "35.453" xsd:decimal
+property_value: chemrof:monoisotopic_mass "34.96885" xsd:decimal
+property_value: chemrof:smiles_string "*Cl" xsd:string
+
+[Term]
+id: CHEBI:36962
+name: organochalcogen compound
+def: "An organochalcogen compound is a compound containing at least one carbon-chalcogen bond." []
+subset: 3:STAR
+synonym: "organochalcogen compound" RELATED [chebi]
+synonym: "organochalcogen compounds" RELATED [chebi]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:36963
+name: organooxygen compound
+def: "An organochalcogen compound containing at least one carbon-oxygen bond." []
+subset: 3:STAR
+synonym: "organooxygen compound" RELATED [chebi]
+synonym: "organooxygen compounds" RELATED [chebi]
+xref: pubmed:17586126 {source="pubmed"}
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:36962 ! organochalcogen compound
+
+[Term]
+id: CHEBI:37511
+name: thiophosphate
+subset: 1:STAR
+synonym: "thiophosphates" RELATED [chebi]
+is_a: CHEBI:26020 ! phosphate
+
+[Term]
+id: CHEBI:37512
+name: organic thiophosphate
+subset: 3:STAR
+synonym: "organic thiophosphates" RELATED [chebi]
+is_a: CHEBI:25703 ! organic phosphate
+is_a: CHEBI:25716 ! organothiophosphorus compound
+is_a: CHEBI:37511 ! thiophosphate
+is_a: CHEBI:37734 ! phosphoric ester
+
+[Term]
+id: CHEBI:37577
+name: heteroatomic molecular entity
+def: "A molecular entity consisting of two or more chemical elements." []
+subset: 3:STAR
+synonym: "chemical compound" RELATED [chebi]
+synonym: "heteroatomic molecular entities" RELATED [chebi]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:37578
+name: halide
+def: "Any heteroatomic molecular entity that is a chemical compound of halogen with other chemical elements." []
+subset: 3:STAR
+synonym: "halides" RELATED [chebi]
+xref: wikipedia.en:Halide {source="wikipedia.en"}
+is_a: CHEBI:24471 ! halogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:37733
+name: EC 3.1.1.8 (cholinesterase) inhibitor
+def: "An EC 3.1.1.* (carboxylic ester hydrolase) inhibitor that interferes with the action of cholinesterase (EC 3.1.1.8)." []
+subset: 3:STAR
+synonym: "anticholineesterase inhibitor" RELATED [chebi]
+synonym: "anticholineesterase inhibitors" RELATED [chebi]
+synonym: "anticholinesterase" RELATED [chebi]
+synonym: "anticholinesterases" RELATED [chebi]
+synonym: "BChE inhibitor" RELATED [chebi]
+synonym: "BChE inhibitors" RELATED [chebi]
+synonym: "benzoylcholinesterase inhibitor" RELATED [chebi]
+synonym: "benzoylcholinesterase inhibitors" RELATED [chebi]
+synonym: "BtChoEase inhibitor" RELATED [chebi]
+synonym: "BtChoEase inhibitors" RELATED [chebi]
+synonym: "butyrylcholine esterase inhibitor" RELATED [chebi]
+synonym: "butyrylcholine esterase inhibitors" RELATED [chebi]
+synonym: "butyrylcholinesterase inhibitor" RELATED [chebi]
+synonym: "butyrylcholinesterase inhibitors" RELATED [chebi]
+synonym: "choline esterase II (unspecific) inhibitor" RELATED [chebi]
+synonym: "choline esterase II (unspecific) inhibitors" RELATED [chebi]
+synonym: "choline esterase inhibitor" RELATED [chebi]
+synonym: "choline esterase inhibitors" RELATED [chebi]
+synonym: "cholinesterase (EC 3.1.1.8) inhibitor" RELATED [chebi]
+synonym: "cholinesterase (EC 3.1.1.8) inhibitors" RELATED [chebi]
+synonym: "cholinesterase inhibitor" RELATED [chebi]
+synonym: "EC 3.1.1.8 (cholinesterase) inhibitors" RELATED [chebi]
+synonym: "EC 3.1.1.8 inhibitor" RELATED [chebi]
+synonym: "EC 3.1.1.8 inhibitors" RELATED [chebi]
+synonym: "non-specific cholinesterase inhibitor" RELATED [chebi]
+synonym: "non-specific cholinesterase inhibitors" RELATED [chebi]
+synonym: "propionylcholinesterase inhibitor" RELATED [chebi]
+synonym: "propionylcholinesterase inhibitors" RELATED [chebi]
+synonym: "pseudocholinesterase inhibitor" RELATED [chebi]
+synonym: "pseudocholinesterase inhibitors" RELATED [chebi]
+is_a: CHEBI:76773 ! EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
+
+[Term]
+id: CHEBI:37734
+name: phosphoric ester
+alt_id: CHEBI:26019
+subset: 1:STAR
+synonym: "phosphate esters" RELATED [chebi]
+synonym: "phosphoric esters" RELATED [chebi]
+is_a: CHEBI:26079 ! phosphoric acid derivative
+is_a: CHEBI:35701 ! ester
+
+[Term]
+id: CHEBI:38101
+name: organonitrogen heterocyclic compound
+def: "Any organonitrogen compound containing a cyclic component with nitrogen and at least one other element as ring member atoms." []
+subset: 3:STAR
+synonym: "heterocyclic organonitrogen compounds" RELATED [chebi]
+synonym: "organonitrogen heterocyclic compounds" RELATED [chebi]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:35352 ! organonitrogen compound
+
+[Term]
+id: CHEBI:38462
+name: EC 3.1.1.7 (acetylcholinesterase) inhibitor
+def: "An EC 3.1.1.* (carboxylic ester hydrolase) inhibitor that interferes with the action of enzyme acetylcholinesterase (EC 3.1.1.7), which helps breaking down of acetylcholine into choline and acetic acid." []
+subset: 3:STAR
+synonym: "AcCholE inhibitor" RELATED [chebi]
+synonym: "AcCholE inhibitors" RELATED [chebi]
+synonym: "acetyl.beta-methylcholinesterase inhibitor" RELATED [chebi]
+synonym: "acetyl.beta-methylcholinesterase inhibitors" RELATED [chebi]
+synonym: "acetylcholine acetylhydrolase inhibitor" RELATED [chebi]
+synonym: "acetylcholine acetylhydrolase inhibitors" RELATED [chebi]
+synonym: "acetylcholine esterase inhibitor" RELATED [chebi]
+synonym: "acetylcholine hydrolase inhibitor" RELATED [chebi]
+synonym: "acetylcholine hydrolase inhibitors" RELATED [chebi]
+synonym: "acetylcholinesterase (EC 3.1.1.7) inhibitor" RELATED [chebi]
+synonym: "acetylcholinesterase (EC 3.1.1.7) inhibitors" RELATED [chebi]
+synonym: "acetylcholinesterase inhibitor" RELATED [chebi]
+synonym: "acetylcholinesterase inhibitors" RELATED [chebi]
+synonym: "acetylthiocholinesterase inhibitor" RELATED [chebi]
+synonym: "acetylthiocholinesterase inhibitors" RELATED [chebi]
+synonym: "AChEI" RELATED [chebi]
+synonym: "choline esterase I inhibitor" RELATED [chebi]
+synonym: "choline esterase I inhibitors" RELATED [chebi]
+synonym: "cholinesterase inhibitor" RELATED [chebi]
+synonym: "cholinesterase inhibitors" RELATED [chebi]
+synonym: "EC 3.1.1.7 (acetylcholinesterase) inhibitors" RELATED [chebi]
+synonym: "EC 3.1.1.7 inhibitor" RELATED [chebi]
+synonym: "EC 3.1.1.7 inhibitors" RELATED [chebi]
+synonym: "true cholinesterase inhibitor" RELATED [chebi]
+synonym: "true cholinesterase inhibitors" RELATED [chebi]
+xref: wikipedia.en:Acetylcholinesterase_inhibitor {source="wikipedia.en"}
+is_a: CHEBI:76773 ! EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
+
+[Term]
+id: CHEBI:39173
+name: chloropyridine
+def: "Compounds containing a pyridine nucleus substituted with one or more chlorine atoms." []
+subset: 3:STAR
+synonym: "chloropyridines" RELATED [chebi]
+is_a: CHEBI:26421 ! pyridines
+is_a: CHEBI:36683 ! organochlorine compound
+
+[Term]
+id: CHEBI:39317
+name: growth regulator
+def: "Any chemical substance that inhibits the life-cycle of an organism." []
+subset: 3:STAR
+synonym: "growth regulators" RELATED [chebi]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:44976
+name: phosphonic acid
+alt_id: CHEBI:26067
+def: "A phosphorus oxoacid that consists of a single pentavalent phosphorus covalently bound via single bonds to a single hydrogen and two hydroxy groups and via a double bond to an oxygen. The parent of the class of phosphonic acids." []
+subset: 3:STAR
+synonym: "(HO)2HPO" RELATED [nist]
+synonym: "[PHO(OH)2]" RELATED [iupac]
+synonym: "dihydrogen hydridotrioxophosphate(2-)" EXACT IUPAC:NAME [IUPAC]
+synonym: "dihydrogen hydridotrioxophosphate(2-)" RELATED IUPAC:NAME [iupac]
+synonym: "H2PHO3" RELATED [iupac]
+synonym: "H3PO3" RELATED [chebi]
+synonym: "HPO(OH)2" RELATED [iupac]
+synonym: "hydridodihydroxidooxidophosphorus" EXACT IUPAC:NAME [IUPAC]
+synonym: "hydridodihydroxidooxidophosphorus" RELATED IUPAC:NAME [iupac]
+synonym: "hydridotrioxophosphoric(2-) acid" EXACT IUPAC:NAME [IUPAC]
+synonym: "hydridotrioxophosphoric(2-) acid" RELATED IUPAC:NAME [iupac]
+synonym: "Phosphite" RELATED [kegg.compound]
+synonym: "Phosphonate" RELATED [kegg.compound]
+synonym: "Phosphonic acid" RELATED [kegg.compound]
+synonym: "phosphonic acid" RELATED [chebi]
+synonym: "Phosphonsaeure" RELATED [chebi]
+xref: cas:13598-36-2 {source="cas"}
+xref: gmelin:1619 {source="gmelin"}
+xref: kegg.compound:C06701 {source="kegg.compound"}
+xref: pdb-ccd:PHS {source="pdb-ccd"}
+xref: reaxys:1209272 {source="reaxys"}
+xref: wikipedia.en:Phosphonic_acid {source="wikipedia.en"}
+is_a: CHEBI:26069 ! phosphonic acids
+is_a: CHEBI:33457 ! phosphorus oxoacid
+relationship: RO:0000087 CHEBI:24127 ! has role fungicide
+relationship: RO:0018034 CHEBI:33462 ! is conjugate acid of phosphonate(1-)
+relationship: RO:0018036 CHEBI:36361 ! is tautomer of phosphorous acid
+property_value: chemrof:charge "0" xsd:integer
+property_value: chemrof:generalized_empirical_formula "H3O3P" xsd:string
+property_value: chemrof:inchi_key_string "ABLZXFCXXLZCGV-UHFFFAOYSA-N" xsd:string
+property_value: chemrof:inchi_string "InChI=1S/H3O3P/c1-4(2)3/h4H,(H2,1,2,3)" xsd:string
+property_value: chemrof:mass "81.995" xsd:decimal
+property_value: chemrof:monoisotopic_mass "81.98198" xsd:decimal
+property_value: chemrof:smiles_string "[H]OP([H])(=O)O[H]" xsd:string
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+alt_id: CHEBI:25700
+alt_id: CHEBI:33244
+def: "Any molecular entity that contains carbon." []
+subset: 3:STAR
+synonym: "organic compounds" RELATED [chebi]
+synonym: "organic entity" RELATED [chebi]
+synonym: "organic molecular entities" RELATED [chebi]
+is_a: CHEBI:33582 ! carbon group molecular entity
+relationship: BFO:0000051 CHEBI:27594 ! has part carbon atom
+
+[Term]
+id: CHEBI:50906
+name: role
+def: "A role is particular behaviour which a material entity may exhibit." []
+subset: 3:STAR
+
+[Term]
+id: CHEBI:51086
+name: chemical role
+def: "A role played by the molecular entity or part thereof within a chemical context." []
+subset: 3:STAR
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:51143
+name: nitrogen molecular entity
+alt_id: CHEBI:25556
+alt_id: CHEBI:7594
+subset: 3:STAR
+synonym: "nitrogen compounds" RELATED [chebi]
+synonym: "nitrogen molecular entities" RELATED [chebi]
+synonym: "Nitrogenous compounds" RELATED [kegg.compound]
+xref: kegg.compound:C06061 {source="kegg.compound"}
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: BFO:0000051 CHEBI:25555 ! has part nitrogen atom
+
+[Term]
+id: CHEBI:52206
+name: biochemical role
+def: "A biological role played by the molecular entity or part thereof within a biochemical context." []
+subset: 3:STAR
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:5686
+name: heterocyclic compound
+def: "A cyclic compound having as ring members atoms of at least two different elements." []
+subset: 3:STAR
+synonym: "compuesto heterociclico" RELATED [iupac]
+synonym: "compuestos heterociclicos" RELATED [iupac]
+synonym: "heterocycle" RELATED [chebi]
+synonym: "Heterocyclic compound" RELATED [kegg.compound]
+synonym: "heterocyclic compounds" RELATED [chebi]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:71300
+name: EC 2.* (transferase) inhibitor
+def: "An enzyme inhibitor that inhibits the action of a transferase (EC 2.*)" []
+subset: 3:STAR
+synonym: "EC 2 inhibitor" RELATED [chebi]
+synonym: "EC 2 inhibitors" RELATED [chebi]
+synonym: "EC 2.* (transferase) inhibitors" RELATED [chebi]
+synonym: "EC 2.* inhibitor" RELATED [chebi]
+synonym: "EC 2.* inhibitors" RELATED [chebi]
+synonym: "transferase inhibitor" RELATED [chebi]
+synonym: "transferase inhibitors" RELATED [chebi]
+xref: wikipedia.en:Transferase {source="wikipedia.en"}
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
+id: CHEBI:72695
+name: organic molecule
+def: "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity." []
+subset: 3:STAR
+synonym: "organic compound" RELATED [chebi]
+synonym: "organic compounds" RELATED [chebi]
+synonym: "organic molecules" RELATED [chebi]
+is_a: CHEBI:25367 ! molecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:76663
+name: EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor
+def: "A transferase inhibitor that inhibits the transfer of an alkyl (other than methyl) or aryl group (EC 2.5.1.*)." []
+subset: 3:STAR
+synonym: "alkyl/aryl (non-methyl) transferase inhibitor" RELATED [chebi]
+synonym: "alkyl/aryl (non-methyl) transferase inhibitors" RELATED [chebi]
+synonym: "EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitors" RELATED [chebi]
+synonym: "EC 2.5.1.* inhibitor" RELATED [chebi]
+synonym: "EC 2.5.1.* inhibitors" RELATED [chebi]
+synonym: "non-methyl alkyl/aryl transferase (EC 2.5.1.*) inhibitor" RELATED [chebi]
+synonym: "non-methyl alkyl/aryl transferase (EC 2.5.1.*) inhibitors" RELATED [chebi]
+synonym: "non-methyl alkyl/aryl transferase inhibitor" RELATED [chebi]
+synonym: "non-methyl alkyl/aryl transferase inhibitors" RELATED [chebi]
+synonym: "non-methyl-alkyl or aryl transferase inhibitor" RELATED [chebi]
+synonym: "non-methyl-alkyl or aryl transferase inhibitors" RELATED [chebi]
+is_a: CHEBI:76834 ! EC 2.5.* (non-methyl-alkyl or aryl transferase) inhibitor
+
+[Term]
+id: CHEBI:76759
+name: EC 3.* (hydrolase) inhibitor
+def: "Any enzyme inhibitor that interferes with the action of a hydrolase (EC 3.*.*.*)." []
+subset: 3:STAR
+synonym: "EC 3.* (hydrolase) inhibitors" RELATED [chebi]
+synonym: "EC 3.* inhibitor" RELATED [chebi]
+synonym: "EC 3.* inhibitors" RELATED [chebi]
+synonym: "EC 3.*.*.* inhibitor" RELATED [chebi]
+synonym: "EC 3.*.*.* inhibitors" RELATED [chebi]
+synonym: "hydrolase (EC 3.*) inhibitor" RELATED [chebi]
+synonym: "hydrolase (EC 3.*) inhibitors" RELATED [chebi]
+synonym: "hydrolase inhibitor" RELATED [chebi]
+synonym: "hydrolase inhibitors" RELATED [chebi]
+xref: wikipedia.en:Hydrolase {source="wikipedia.en"}
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
+id: CHEBI:76760
+name: EC 3.1.* (ester hydrolase) inhibitor
+def: "A hydrolase inhibitor that interferes with the action of any ester hydrolase (EC 3.1.*.*)." []
+subset: 3:STAR
+synonym: "EC 3.1.* (ester hydrolase) inhibitors" RELATED [chebi]
+synonym: "EC 3.1.* inhibitor" RELATED [chebi]
+synonym: "EC 3.1.* inhibitors" RELATED [chebi]
+synonym: "ester hydrolase (EC 3.1.*) inhibitor" RELATED [chebi]
+synonym: "ester hydrolase (EC 3.1.*) inhibitors" RELATED [chebi]
+synonym: "ester hydrolase inhibitor" RELATED [chebi]
+synonym: "ester hydrolase inhibitors" RELATED [chebi]
+is_a: CHEBI:76759 ! EC 3.* (hydrolase) inhibitor
+
+[Term]
+id: CHEBI:76773
+name: EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
+def: "An EC 3.1.* (ester hydrolase) inhibitor that interferes with the action of a carboxylic ester hydrolase (EC 3.1.1.*)." []
+subset: 3:STAR
+synonym: "carboxylic ester hydrolase (EC 3.1.1.*) inhibitor" RELATED [chebi]
+synonym: "carboxylic ester hydrolase (EC 3.1.1.*) inhibitors" RELATED [chebi]
+synonym: "EC 3.1.1.* (carboxylic ester hydrolase) inhibitors" RELATED [chebi]
+synonym: "EC 3.1.1.* inhibitor" RELATED [chebi]
+synonym: "EC 3.1.1.* inhibitors" RELATED [chebi]
+is_a: CHEBI:76760 ! EC 3.1.* (ester hydrolase) inhibitor
+
+[Term]
+id: CHEBI:76834
+name: EC 2.5.* (non-methyl-alkyl or aryl transferase) inhibitor
+def: "An EC 2.5.* (transferase) inhibitor that inhibits the action of any transferase that transfers an alkyl (other than methyl) or aryl group (EC 2.5.*)." []
+subset: 3:STAR
+synonym: "EC 2.5.* (non-methyl-alkyl or aryl transferase) inhibitors" RELATED [chebi]
+synonym: "EC 2.5.* inhibitor" RELATED [chebi]
+synonym: "EC 2.5.* inhibitors" RELATED [chebi]
+synonym: "non-methyl-alkyl or aryl transferase (EC 2.5.*) inhibitor" RELATED [chebi]
+synonym: "non-methyl-alkyl or aryl transferase (EC 2.5.*) inhibitors" RELATED [chebi]
+is_a: CHEBI:71300 ! EC 2.* (transferase) inhibitor
+
+[Term]
+id: CHEBI:78298
+name: environmental contaminant
+def: "Any minor or unwanted substance introduced into the environment that can have undesired effects." []
+subset: 3:STAR
+synonym: "environmental contaminants" RELATED [chebi]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:83811
+name: proteinogenic amino acid derivative
+def: "Any derivative of a proteinogenic amino acid resulting from reaction at an amino group, carboxy group, or a side-chain functional group, or from the replacement of any hydrogen by a heteroatom." []
+subset: 3:STAR
+synonym: "canonical amino acid derivative" RELATED [chebi]
+synonym: "canonical amino acid derivatives" RELATED [chebi]
+synonym: "canonical amino-acid derivative" RELATED [chebi]
+synonym: "canonical amino-acid derivatives" RELATED [chebi]
+synonym: "proteinogenic amino acid derivatives" RELATED [chebi]
+synonym: "proteinogenic amino-acid derivative" RELATED [chebi]
+synonym: "proteinogenic amino-acid derivatives" RELATED [chebi]
+is_a: CHEBI:83821 ! amino-acid derivative
+relationship: RO:0018038 CHEBI:83813 ! has functional parent proteinogenic amino acid
+
+[Term]
+id: CHEBI:83821
+name: amino-acid derivative
+alt_id: CHEBI:25359
+def: "Any derivative of an amino acid resulting from reaction at an amino group, carboxy group, side-chain functional group, or from the replacement of any hydrogen by a heteroatom. The definition normally excludes peptides containing amino acid residues." []
+subset: 3:STAR
+synonym: "amino acid derivative" RELATED [chebi]
+synonym: "amino acid derivatives" RELATED [chebi]
+synonym: "amino-acid derivatives" RELATED [chebi]
+synonym: "modified amino acids" RELATED [chebi]
+is_a: CHEBI:35352 ! organonitrogen compound
+

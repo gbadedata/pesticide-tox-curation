@@ -1,0 +1,72 @@
+8022	|	Oncorhynchus mykiss	|		|	scientific name	|
+8022	|	Oncorhynchus mykiss (Walbaum, 1792)	|		|	authority	|
+8022	|	Oncorhynchus nerka mykiss	|		|	synonym	|
+8022	|	Parasalmo mykiss	|		|	synonym	|
+8022	|	rainbow trout	|		|	genbank common name	|
+8022	|	Salmo mykiss	|		|	synonym	|
+8022	|	Salmo mykiss Walbaum, 1792	|		|	authority	|
+9031	|	bantam	|		|	common name	|
+9031	|	chicken	|		|	genbank common name	|
+9031	|	chickens	|		|	common name	|
+9031	|	dwarf Leghorn chickens	|		|	includes	|
+9031	|	Gallus domesticus	|		|	equivalent name	|
+9031	|	Gallus gallus domesticus	|		|	synonym	|
+9031	|	Gallus gallus	|		|	scientific name	|
+9031	|	Phasianus gallus Linnaeus, 1758	|		|	authority	|
+9031	|	Phasianus gallus	|		|	synonym	|
+9031	|	red junglefowl	|		|	includes	|
+9606	|	Homo sapiens Linnaeus, 1758	|		|	authority	|
+9606	|	Homo sapiens	|		|	scientific name	|
+9606	|	human	|		|	genbank common name	|
+9615	|	beagle dog	|		|	includes	|
+9615	|	beagle dogs	|		|	includes	|
+9615	|	Canis borealis Smith, 1839	|		|	authority	|
+9615	|	Canis borealis	|		|	synonym	|
+9615	|	Canis canis	|		|	synonym	|
+9615	|	Canis domesticus	|		|	synonym	|
+9615	|	Canis familiaris Linnaeus, 1758	|		|	authority	|
+9615	|	Canis familiaris	|		|	synonym	|
+9615	|	Canis lupus borealis Smith, 1839	|		|	authority	|
+9615	|	Canis lupus borealis	|		|	synonym	|
+9615	|	Canis lupus familiaris Linnaeus, 1758	|		|	authority	|
+9615	|	Canis lupus familiaris	|		|	scientific name	|
+9615	|	dog	|		|	genbank common name	|
+9615	|	dogs	|		|	common name	|
+9986	|	domestic rabbit	|		|	common name	|
+9986	|	European rabbit	|		|	common name	|
+9986	|	Japanese white rabbit	|		|	common name	|
+9986	|	Lepus cuniculus Linnaeus, 1758	|		|	authority	|
+9986	|	Lepus cuniculus	|		|	synonym	|
+9986	|	New Zealand rabbit	|		|	includes	|
+9986	|	Oryctolagus cuniculus	|		|	scientific name	|
+9986	|	rabbit	|		|	genbank common name	|
+9986	|	rabbits	|		|	common name	|
+10090	|	Balb/c mouse	|		|	includes	|
+10090	|	house mouse	|		|	genbank common name	|
+10090	|	LK3 transgenic mice	|		|	includes	|
+10090	|	mouse	|	mouse <Mus musculus>	|	common name	|
+10090	|	Mus musculus Linnaeus, 1758	|		|	authority	|
+10090	|	Mus musculus	|		|	scientific name	|
+10090	|	Mus sp. 129SV	|		|	includes	|
+10090	|	nude mice	|		|	includes	|
+10090	|	transgenic mice	|		|	includes	|
+10116	|	brown rat	|		|	common name	|
+10116	|	Buffalo rat	|		|	includes	|
+10116	|	laboratory rat	|		|	includes	|
+10116	|	Mus norvegicus Berkenhout, 1769	|		|	authority	|
+10116	|	Mus norvegicus	|		|	synonym	|
+10116	|	Norway rat	|		|	genbank common name	|
+10116	|	rat	|	rat <Rattus norvegicus>	|	common name	|
+10116	|	rats	|	rats <Rattus norvegicus>	|	common name	|
+10116	|	Rattus norvegicus	|		|	scientific name	|
+10116	|	Rattus PC12 clone IS	|		|	includes	|
+10116	|	Rattus sp. strain Wistar	|		|	includes	|
+10116	|	Sprague-Dawley rat	|		|	includes	|
+10116	|	USNM 125212	|	USNM 125212 <type material>	|	type material	|
+10116	|	USNM-125212	|	USNM-125212 <type material>	|	type material	|
+10116	|	USNM:125212	|	USNM:125212 <type material>	|	type material	|
+10116	|	USNM125212	|	USNM125212 <type material>	|	type material	|
+10116	|	Wistar rats	|		|	includes	|
+10116	|	zitter rats	|		|	includes	|
+35525	|	Daphnia magna	|		|	scientific name	|
+35525	|	Daphnia magna Straus, 1820	|		|	authority	|

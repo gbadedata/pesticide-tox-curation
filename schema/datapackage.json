@@ -1,0 +1,640 @@
+{
+  "name": "pesticide-tox-curation",
+  "title": "Curated EFSA pesticide toxicology",
+  "profile": "data-package",
+  "licenses": [
+    {
+      "name": "CC-BY-ND-4.0",
+      "title": "EFSA OpenFoodTox (derived rows are not redistributed)",
+      "path": "https://creativecommons.org/licenses/by-nd/4.0/"
+    },
+    {
+      "name": "CC-BY-4.0",
+      "title": "ChEBI",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "aopwiki",
+      "path": "https://aopwiki.org/downloads/aop-wiki-xml-2026-10-01.gz",
+      "sha256": "317c591d24427f2772fee434d77f0bfa8f918edf4f69f3e44d5218ab6564c70b"
+    },
+    {
+      "title": "chebi",
+      "path": "https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo.gz",
+      "sha256": "fdc1d2d5c4d3e8227891a2eb955aa4d9433449a8f8830a6b68bc567f770bd216"
+    },
+    {
+      "title": "ncbi_taxonomy",
+      "path": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz",
+      "sha256": "2d0ffdc3915f70e2f5fd933d94bd101ac15790ac84d127cfcc88350f3c1022ce"
+    },
+    {
+      "title": "openfoodtox",
+      "path": "https://zenodo.org/records/19388272/files/OFT3.0%20export%20repository.xlsx?download=1",
+      "sha256": "5181661e921651d4087b544981e1e5a63b99532844eac0112732806a00a85eda",
+      "doi": "10.5281/zenodo.19388272"
+    }
+  ],
+  "resources": [
+    {
+      "name": "substances",
+      "path": "substances.csv",
+      "format": "csv",
+      "description": "One row per pesticide-domain substance: identifiers, structure checks, ChEBI mapping, PubChem cross-check.",
+      "schema": {
+        "fields": [
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "chemical_name",
+            "type": "string"
+          },
+          {
+            "name": "composition",
+            "type": "string"
+          },
+          {
+            "name": "ref_uuid",
+            "type": "string"
+          },
+          {
+            "name": "reference_name",
+            "type": "string"
+          },
+          {
+            "name": "cas_inventory",
+            "type": "string"
+          },
+          {
+            "name": "cas_field",
+            "type": "string"
+          },
+          {
+            "name": "ec_number",
+            "type": "string"
+          },
+          {
+            "name": "iupac_name",
+            "type": "string"
+          },
+          {
+            "name": "inchikey_oft",
+            "type": "string"
+          },
+          {
+            "name": "inchi_oft",
+            "type": "string"
+          },
+          {
+            "name": "formula_oft",
+            "type": "string"
+          },
+          {
+            "name": "smiles_oft",
+            "type": "string"
+          },
+          {
+            "name": "pubchem_cid_oft",
+            "type": "string"
+          },
+          {
+            "name": "dtxsid",
+            "type": "string"
+          },
+          {
+            "name": "efsa_param_code",
+            "type": "string"
+          },
+          {
+            "name": "efsa_role",
+            "type": "string",
+            "description": "active_substance (EFSA code PPP) or residue_or_metabolite (PAR), etc."
+          },
+          {
+            "name": "cas",
+            "type": "string",
+            "description": "CAS Registry Number, normalised"
+          },
+          {
+            "name": "cas_valid",
+            "type": "string",
+            "description": "CAS check digit passes"
+          },
+          {
+            "name": "cas_conflict",
+            "type": "boolean"
+          },
+          {
+            "name": "inchikey_from_inchi",
+            "type": "string"
+          },
+          {
+            "name": "inchikey_from_smiles",
+            "type": "string"
+          },
+          {
+            "name": "structure_agreement",
+            "type": "string",
+            "description": "Whether OpenFoodTox InChI and SMILES describe the same molecule"
+          },
+          {
+            "name": "inchikey",
+            "type": "string",
+            "description": "Curated InChIKey, computed with RDKit from the InChI (else SMILES)",
+            "rdfType": "https://www.inchi-trust.org/"
+          },
+          {
+            "name": "chebi_id",
+            "type": "string",
+            "description": "ChEBI identifier (CURIE)",
+            "rdfType": "http://purl.obolibrary.org/obo/chebi.owl"
+          },
+          {
+            "name": "chebi_match",
+            "type": "string"
+          },
+          {
+            "name": "chebi_name",
+            "type": "string"
+          },
+          {
+            "name": "chebi_classes",
+            "type": "string",
+            "description": "Agrochemical classes asserted in ChEBI via has_role (RO:0000087)",
+            "rdfType": "http://purl.obolibrary.org/obo/RO_0000087"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reference_values",
+      "path": "reference_values.csv",
+      "format": "csv",
+      "description": "Health-based reference values (ADI, ARfD, AOEL, AAOEL, other) in long format with harmonised units.",
+      "schema": {
+        "fields": [
+          {
+            "name": "record_uuid",
+            "type": "string",
+            "description": "IUCLID document UUID of the source record"
+          },
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "descriptor",
+            "type": "string",
+            "description": "Reference value or dose descriptor (ADI, ARfD, AOEL, NOAEL, LD50, ...)"
+          },
+          {
+            "name": "no_allocated",
+            "type": "boolean"
+          },
+          {
+            "name": "qualifier",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "description": "Numeric value as recorded"
+          },
+          {
+            "name": "value_upper",
+            "type": "string"
+          },
+          {
+            "name": "value_field",
+            "type": "string"
+          },
+          {
+            "name": "unit_raw",
+            "type": "string",
+            "description": "Unit as recorded in IUCLID"
+          },
+          {
+            "name": "unit_clean",
+            "type": "string"
+          },
+          {
+            "name": "unit_ucum",
+            "type": "string",
+            "description": "Unit as a UCUM code",
+            "rdfType": "https://ucum.org/"
+          },
+          {
+            "name": "dimension",
+            "type": "string"
+          },
+          {
+            "name": "value_canonical",
+            "type": "number",
+            "description": "Value converted to the canonical unit"
+          },
+          {
+            "name": "unit_canonical",
+            "type": "string",
+            "description": "Canonical unit: mg/kg bw/day, mg/kg bw, mg/L or mg/m3"
+          },
+          {
+            "name": "unit_issue",
+            "type": "string"
+          },
+          {
+            "name": "uncertainty_factor",
+            "type": "number",
+            "description": "Overall uncertainty factor applied by EFSA"
+          },
+          {
+            "name": "oral_absorption_pct",
+            "type": "number"
+          },
+          {
+            "name": "population",
+            "type": "string"
+          },
+          {
+            "name": "critical_record_uuid",
+            "type": "string",
+            "description": "Study record EFSA cites as the critical endpoint"
+          },
+          {
+            "name": "issues",
+            "type": "string",
+            "description": "Semicolon-separated reason codes (see reports/qa_report.md)"
+          },
+          {
+            "name": "quarantined",
+            "type": "boolean",
+            "description": "True when an issue makes the row unusable as a number"
+          },
+          {
+            "name": "source_doi",
+            "type": "string",
+            "description": "DOI of the EFSA output(s) the record was published in",
+            "rdfType": "https://doi.org"
+          },
+          {
+            "name": "source_output_type",
+            "type": "string"
+          },
+          {
+            "name": "evaluation_date",
+            "type": "string"
+          },
+          {
+            "name": "n_dossiers",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "effect_levels",
+      "path": "effect_levels.csv",
+      "format": "csv",
+      "description": "Human-health study effect levels (NOAEL, LOAEL, BMDL, LD50, ...) with study context and harmonised units.",
+      "schema": {
+        "fields": [
+          {
+            "name": "record_uuid",
+            "type": "string",
+            "description": "IUCLID document UUID of the source record"
+          },
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "endpoint_category",
+            "type": "string"
+          },
+          {
+            "name": "study_type",
+            "type": "string"
+          },
+          {
+            "name": "guideline",
+            "type": "string"
+          },
+          {
+            "name": "species_raw",
+            "type": "string"
+          },
+          {
+            "name": "ncbi_taxon",
+            "type": "string",
+            "description": "Test species as an NCBI Taxonomy CURIE",
+            "rdfType": "http://purl.obolibrary.org/obo/ncbitaxon.owl"
+          },
+          {
+            "name": "taxon_match",
+            "type": "string",
+            "description": "How the species was mapped (curator_override, scientific_name, ...)"
+          },
+          {
+            "name": "route",
+            "type": "string"
+          },
+          {
+            "name": "duration",
+            "type": "string"
+          },
+          {
+            "name": "structure",
+            "type": "string"
+          },
+          {
+            "name": "effect_level_uuid",
+            "type": "string"
+          },
+          {
+            "name": "descriptor",
+            "type": "string",
+            "description": "Reference value or dose descriptor (ADI, ARfD, AOEL, NOAEL, LD50, ...)"
+          },
+          {
+            "name": "qualifier",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "description": "Numeric value as recorded"
+          },
+          {
+            "name": "unit_raw",
+            "type": "string",
+            "description": "Unit as recorded in IUCLID"
+          },
+          {
+            "name": "unit_clean",
+            "type": "string"
+          },
+          {
+            "name": "unit_ucum",
+            "type": "string",
+            "description": "Unit as a UCUM code",
+            "rdfType": "https://ucum.org/"
+          },
+          {
+            "name": "dimension",
+            "type": "string"
+          },
+          {
+            "name": "value_canonical",
+            "type": "number",
+            "description": "Value converted to the canonical unit"
+          },
+          {
+            "name": "unit_canonical",
+            "type": "string",
+            "description": "Canonical unit: mg/kg bw/day, mg/kg bw, mg/L or mg/m3"
+          },
+          {
+            "name": "unit_issue",
+            "type": "string"
+          },
+          {
+            "name": "basis",
+            "type": "string"
+          },
+          {
+            "name": "sex",
+            "type": "string"
+          },
+          {
+            "name": "key_result",
+            "type": "string"
+          },
+          {
+            "name": "issues",
+            "type": "string",
+            "description": "Semicolon-separated reason codes (see reports/qa_report.md)"
+          },
+          {
+            "name": "quarantined",
+            "type": "boolean",
+            "description": "True when an issue makes the row unusable as a number"
+          },
+          {
+            "name": "has_value",
+            "type": "boolean"
+          },
+          {
+            "name": "source_doi",
+            "type": "string",
+            "description": "DOI of the EFSA output(s) the record was published in",
+            "rdfType": "https://doi.org"
+          },
+          {
+            "name": "source_output_type",
+            "type": "string"
+          },
+          {
+            "name": "evaluation_date",
+            "type": "string"
+          },
+          {
+            "name": "n_dossiers",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "name": "refvalue_consistency",
+      "path": "refvalue_consistency.csv",
+      "format": "csv",
+      "description": "Whether each ADI/ARfD/AOEL/AAOEL follows from the point of departure and uncertainty factor of the study it cites.",
+      "schema": {
+        "fields": [
+          {
+            "name": "record_uuid",
+            "type": "string",
+            "description": "IUCLID document UUID of the source record"
+          },
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "descriptor",
+            "type": "string",
+            "description": "Reference value or dose descriptor (ADI, ARfD, AOEL, NOAEL, LD50, ...)"
+          },
+          {
+            "name": "value_canonical",
+            "type": "number",
+            "description": "Value converted to the canonical unit"
+          },
+          {
+            "name": "uncertainty_factor",
+            "type": "number",
+            "description": "Overall uncertainty factor applied by EFSA"
+          },
+          {
+            "name": "oral_absorption_pct",
+            "type": "number"
+          },
+          {
+            "name": "critical_record_uuid",
+            "type": "string",
+            "description": "Study record EFSA cites as the critical endpoint"
+          },
+          {
+            "name": "pod_descriptor",
+            "type": "string"
+          },
+          {
+            "name": "pod_value",
+            "type": "number"
+          },
+          {
+            "name": "pod_species",
+            "type": "string"
+          },
+          {
+            "name": "implied",
+            "type": "number"
+          },
+          {
+            "name": "ratio",
+            "type": "number"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "Consistency status: exact, rounded, absorption_not_recorded, not_explained, not_checkable:*"
+          },
+          {
+            "name": "pattern",
+            "type": "string",
+            "description": "For not_explained values: off_by_10^k, value_equals_point_of_departure or unexplained"
+          }
+        ]
+      }
+    },
+    {
+      "name": "aop_links",
+      "path": "aop_links.csv",
+      "format": "csv",
+      "description": "Links from substances to AOP-Wiki chemicals, stressors, AOPs and key-event ontology terms.",
+      "schema": {
+        "fields": [
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "chemical_uuid",
+            "type": "string"
+          },
+          {
+            "name": "aop_chemical_name",
+            "type": "string"
+          },
+          {
+            "name": "aop_casrn",
+            "type": "string"
+          },
+          {
+            "name": "dsstox_id",
+            "type": "string"
+          },
+          {
+            "name": "match",
+            "type": "string"
+          },
+          {
+            "name": "stressor_uuid",
+            "type": "string"
+          },
+          {
+            "name": "stressor_name",
+            "type": "string"
+          },
+          {
+            "name": "aop_uuid",
+            "type": "string"
+          },
+          {
+            "name": "aop_wiki_id",
+            "type": "number",
+            "description": "AOP number in AOP-Wiki",
+            "rdfType": "https://aopwiki.org"
+          },
+          {
+            "name": "aop_title",
+            "type": "string"
+          },
+          {
+            "name": "oecd_status",
+            "type": "string"
+          },
+          {
+            "name": "wiki_status",
+            "type": "string"
+          },
+          {
+            "name": "mie_titles",
+            "type": "string"
+          },
+          {
+            "name": "ao_titles",
+            "type": "string"
+          },
+          {
+            "name": "ke_ontology_terms",
+            "type": "string",
+            "description": "GO, UBERON, CL, HP, MP, CHEBI, PR terms on the AOP's key events"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quarantine",
+      "path": "quarantine.csv",
+      "format": "csv",
+      "description": "Rows excluded from numeric use, with reason codes.",
+      "schema": {
+        "fields": [
+          {
+            "name": "table",
+            "type": "string"
+          },
+          {
+            "name": "record_uuid",
+            "type": "string",
+            "description": "IUCLID document UUID of the source record"
+          },
+          {
+            "name": "substance_uuid",
+            "type": "string",
+            "description": "IUCLID SUBSTANCE document UUID in OpenFoodTox 3.0"
+          },
+          {
+            "name": "descriptor",
+            "type": "string",
+            "description": "Reference value or dose descriptor (ADI, ARfD, AOEL, NOAEL, LD50, ...)"
+          },
+          {
+            "name": "issues",
+            "type": "string",
+            "description": "Semicolon-separated reason codes (see reports/qa_report.md)"
+          }
+        ]
+      }
+    }
+  ]
+}
