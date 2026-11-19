@@ -120,9 +120,10 @@ def run(raw: Path = RAW, curated: Path = CURATED, reports: Path = REPORTS) -> di
         df.to_parquet(curated / f"{name}.parquet", index=False)
         df.to_csv(curated / f"{name}.csv", index=False)
     log(f"wrote {len(tables)} tables to {curated}")
-    from . import package, report
+    from . import figures, package, report
     package.write(tables, raw, curated, curated.parents[1] / "schema" / "datapackage.json")
     report.write(tables, raw, reports)
+    figures.write(cons, reports)
     log(f"wrote {reports / 'qa_report.md'}")
     return tables
 
