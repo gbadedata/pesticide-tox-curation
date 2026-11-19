@@ -11,6 +11,9 @@ curated tables stay local because OpenFoodTox is licensed CC BY-ND 4.0.
 | chebi | `chebi.obo.gz` |  | CC BY 4.0 | `fdc1d2d5c4d3` |
 | ncbi_taxonomy | `ncbi_taxonomy_names.dmp.gz` |  |  | `2d0ffdc3915f` |
 | openfoodtox | `OFT3.0_export_repository.xlsx` | 10.5281/zenodo.19388272 | CC BY-ND 4.0 | `5181661e9216` |
+| pubchem_cas_to_cid | `pubchem_cas_to_cid.jsonl` |  |  | `428d86347542` |
+| pubchem_chebi | `pubchem_cid_chebi.jsonl` |  |  | `4345fdb601ef` |
+| pubchem_properties | `pubchem_properties.jsonl` |  |  | `be4ebb7897f1` |
 
 ## Scope
 
@@ -35,6 +38,22 @@ are residues or metabolites (`PAR`).
 - ChEBI: 587 substances mapped (509 by InChIKey, 78 by CAS); 367 of 410 active substances.
 - Of the mapped active substances, 112 have no agrochemical role asserted in ChEBI.
 
+### CAS number vs structure (PubChem)
+
+For substances with a CAS number, PubChem's structure for that CAS was compared with the curated InChIKey.
+
+| Result | Substances |
+|---|---:|
+| agree | 613 |
+| same_skeleton | 60 |
+| not_found | 23 |
+| no_structure_to_compare | 16 |
+| same_parent_salt_or_mixture | 9 |
+| metal_or_inorganic_representation | 8 |
+| different_formula | 4 |
+| same_formula_different_connectivity | 3 |
+| ambiguous | 1 |
+| invalid_cas | 1 |
 
 ### Active substances by ChEBI role
 

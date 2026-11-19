@@ -14,11 +14,17 @@ from pathlib import Path
 import pandas as pd
 from rdkit import Chem, RDLogger
 from rdkit.Chem import inchi as rd_inchi
+from rdkit.Chem import rdMolDescriptors
+from rdkit.Chem.MolStandardize import rdMolStandardize
 
 from . import identifiers
 from .chebi import ChEBI
 
 RDLogger.DisableLog("rdApp.*")
+
+ORGANIC = {"C", "H", "N", "O", "S", "P", "F", "Cl", "Br", "I", "B", "Si", "Se"}
+_LFC = rdMolStandardize.LargestFragmentChooser()
+_UNCHARGE = rdMolStandardize.Uncharger()
 
 EFSA_ROLE = {"PPP": "active_substance", "PAR": "residue_or_metabolite", "ADD": "additive",
              "VET": "veterinary", "CHE": "chemical"}
@@ -66,6 +72,38 @@ def _agreement(k_inchi, k_smiles, has_inchi, has_smiles) -> str:
     return "no_structure"
 
 
+def _our_mol(row):
+    if isinstance(row["inchi_oft"], str):
+        m = rd_inchi.MolFromInchi(row["inchi_oft"])
+        if m is not None:
+            return m
+    return Chem.MolFromSmiles(row["smiles_oft"]) if isinstance(row["smiles_oft"], str) else None
+
+
+def _parent_key(m) -> str | None:
+    try:
+        return Chem.MolToInchiKey(_UNCHARGE.uncharge(_LFC.choose(m)))
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _explain_disagreement(row, pubchem_smiles) -> str:
+    """Sort a CAS-vs-structure disagreement into a reviewable category."""
+    ours = _our_mol(row)
+    theirs = Chem.MolFromSmiles(pubchem_smiles) if isinstance(pubchem_smiles, str) else None
+    if ours is None or theirs is None:
+        return "disagree_unparsed"
+    po, pt = _parent_key(ours), _parent_key(theirs)
+    if po and pt and po[:14] == pt[:14]:
+        return "same_parent_salt_or_mixture"
+    atoms = {a.GetSymbol() for m in (ours, theirs) for a in m.GetAtoms()}
+    if atoms - ORGANIC:
+        return "metal_or_inorganic_representation"
+    if rdMolDescriptors.CalcMolFormula(ours) == rdMolDescriptors.CalcMolFormula(theirs):
+        return "same_formula_different_connectivity"
+    return "different_formula"
+
+
 def build(subs: pd.DataFrame, chebi: ChEBI | None, raw: Path | None = None) -> pd.DataFrame:
     s = subs.copy()
     s["efsa_role"] = s["efsa_param_code"].str.extract(r"-([A-Z]+)$")[0].map(EFSA_ROLE)
@@ -105,12 +143,12 @@ def build(subs: pd.DataFrame, chebi: ChEBI | None, raw: Path | None = None) -> p
     if raw is not None and (raw / "pubchem_cas_to_cid.jsonl").exists() \
             and (raw / "pubchem_properties.jsonl").exists():
         cas_rows, props, _ = identifiers.load_pubchem(raw)
-        res = [identifiers.resolve(c, cas_rows, props) if isinstance(c, str) and c in cas_rows
-               else {"pubchem_cid": None, "inchikey": None, "id_status": "not_looked_up",
-                     "alt_cids": None}
+        res = [identifiers.resolve(c if isinstance(c, str) else None, cas_rows, props)
                for c in s["cas"]]
         r = pd.DataFrame(res, index=s.index).add_prefix("pubchem_")
         s = pd.concat([s, r.rename(columns={"pubchem_pubchem_cid": "pubchem_cid"})], axis=1)
+
+        pc_smiles = props.set_index("CID")["SMILES" if "SMILES" in props else "IsomericSMILES"]
 
         def agree(row):
             a, b = row["inchikey"], row["pubchem_inchikey"]
@@ -120,6 +158,8 @@ def build(subs: pd.DataFrame, chebi: ChEBI | None, raw: Path | None = None) -> p
                 return "no_structure_to_compare"
             if a == b:
                 return "agree"
-            return "same_skeleton" if a[:14] == b[:14] else "disagree"
+            if a[:14] == b[:14]:
+                return "same_skeleton"
+            return _explain_disagreement(row, pc_smiles.get(int(row["pubchem_cid"])))
         s["cas_structure_check"] = s.apply(agree, axis=1)
     return s

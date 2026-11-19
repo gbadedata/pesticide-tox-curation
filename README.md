@@ -44,6 +44,14 @@ the published EFSA conclusions; they are leads, not verdicts.
   substance with two different CAS numbers (triflumizole).
 - 367 of 410 active substances map to ChEBI, but 112 of those have no agrochemical role
   asserted in ChEBI.
+- PubChem cross-check (CAS number -> PubChem structure vs curated InChIKey): 613
+  substances agree and 60 agree apart from stereochemistry. The 24 that don't are sorted
+  into 9 salts or isomer mixtures, 8 inorganic or organometallic representations, 3 with
+  the same formula but different connectivity (pyridalyl, spirodiclofen, tralkoxydim)
+  and 4 with a different formula. For example, the CAS number recorded for the
+  metabolite 2-methylpropyl methanesulfonate resolves in PubChem to a C11 terpene
+  alcohol. The 23 CAS numbers PubChem doesn't know are mostly oils, extracts and
+  mixtures with no single structure.
 
 **Units**
 

@@ -35,6 +35,21 @@
       "path": "https://zenodo.org/records/19388272/files/OFT3.0%20export%20repository.xlsx?download=1",
       "sha256": "5181661e921651d4087b544981e1e5a63b99532844eac0112732806a00a85eda",
       "doi": "10.5281/zenodo.19388272"
+    },
+    {
+      "title": "pubchem_cas_to_cid",
+      "path": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/<CAS>/cids/JSON",
+      "sha256": "428d8634754282e78c40e4210d140736d7d98846cc8f69a6c377fc6290d6bc38"
+    },
+    {
+      "title": "pubchem_chebi",
+      "path": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/synonyms/JSON",
+      "sha256": "4345fdb601ef493366009ba6cf386d798564a837f4ea217eec834b4a5d58bff5"
+    },
+    {
+      "title": "pubchem_properties",
+      "path": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/property/.../JSON",
+      "sha256": "be4ebb7897f1e732a362f543c22ff392ff5bf417a7cbd30a3414eac8aaa23b72"
     }
   ],
   "resources": [
@@ -167,6 +182,29 @@
             "type": "string",
             "description": "Agrochemical classes asserted in ChEBI via has_role (RO:0000087)",
             "rdfType": "http://purl.obolibrary.org/obo/RO_0000087"
+          },
+          {
+            "name": "pubchem_cid",
+            "type": "number",
+            "description": "PubChem compound ID found for the CAS number",
+            "rdfType": "https://pubchem.ncbi.nlm.nih.gov/"
+          },
+          {
+            "name": "pubchem_inchikey",
+            "type": "string"
+          },
+          {
+            "name": "pubchem_id_status",
+            "type": "string"
+          },
+          {
+            "name": "pubchem_alt_cids",
+            "type": "string"
+          },
+          {
+            "name": "cas_structure_check",
+            "type": "string",
+            "description": "PubChem structure for the CAS vs curated InChIKey"
           }
         ]
       }
